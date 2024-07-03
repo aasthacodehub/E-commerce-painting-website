@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+body {
+    color: #88a757;
+    background: hwb(120 20% 57%);
+    border:85px solid hsla(175, 94%, 13%, 0.986);
+        box-sizing: border-box;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: hsl(220, 31%, 6%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: hsl(36, 87%, 47%);
+    text-decoration: double;
+    font-weight: 700;
+    cursor: default;
+    opacity: 0;
+    animation: slideLeft .6s ease forwards;
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 25px;
+    color: hwb(190 92% 6%);
+    text-decoration: underline;
+    font-weight: 500;
+    margin-left: 5px;
+    transition: .7s;
+    opacity: 0;
+    animation: slideBottom .5s ease forwards;
+    animation-delay: calc(.3s * var(--i));
+}
+
+.navbar a:hover {
+    color: rgb(237, 180, 23);
+}
+header nav .shopping-bag {
+    position: relative;
+}
+
+header nav .shopping-bag i {
+    font-size: 1.5em;
+}
+
+header nav .shopping-bag #cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: #ff6347;
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.8em;
+}
+.search-form {
+    display: inline-flex;
+    margin-inline-end: 30px;
+}
+
+.search-form input[type="text"] {
+    padding: 10px;
+    border: 3px solid #ccc;
+    border-radius: 8px 0 0 4px;
+    width: 200px;
+    font-size: 15px;
+}
+
+.search-form button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-form button:hover {
+    background-color: #0056b3;
+}
+.products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.products {
+    padding: 50px 10%;
+    background: rgb(72, 158, 38);
+    color: #000;
+}
+
+.products h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 30px;
+    color: hsl(270, 4%, 10%);
+    text-decoration: underline;
+    cursor: default;
+    opacity: 0;
+    animation: slideLeft .6s ease forwards;
+}
+
+.product-list {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.home {
+    text-align: center;
+    padding: 100px 0;
+    color: #f89a0c;
+    transition: .7s;
+    opacity: 0;
+    animation: slideTop .6s ease forwards;
+    animation-delay: calc(.6s * var(--i));
+}
+
+.product {
+    background: hwb(143 7% 56%);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 200px;
+    overflow: hidden;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight .6s ease forwards;
+
+}
+
+.product img {
+    max-width: 100%;
+    height: 50%;
+    margin-bottom: 10px;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s;
+}
+.product:hover img {
+    transform: scale(1.1);
+}
+.product h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.product p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.product button {
+    padding: 10px 20px;
+    background: #051129;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+img {
+    border: 5px solid hsl(199, 93%, 17%);
+        border-radius: 10px;
+        padding: 5px;
+        margin: 10px;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    background: hwb(150 44% 54%);
+    color: #0f0f0f;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
